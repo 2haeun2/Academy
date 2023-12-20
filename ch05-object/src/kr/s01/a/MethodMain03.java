@@ -1,0 +1,42 @@
+package kr.s01.a;
+
+public class MethodMain03 {
+	
+	//¸â¹öº¯¼ö
+	String name;
+	int korean;
+	int english;
+	int math;
+	
+	//¸â¹ö¸Þ¼­µå
+	//ÃÑÁ¡ ±¸ÇÏ±â
+	public int makeSum() {
+		return korean + english + math;
+	}
+	//Æò±Õ ±¸ÇÏ±â
+	public int makeAverage() {
+		return makeSum() / 3;
+	}
+	
+	public static void main(String[] args) {
+		//°´Ã¼ ¼±¾ð ¹× »ý¼º
+		MethodMain03 me = new MethodMain03();
+		me.name = "È«±æµ¿";
+		me.korean = 98;
+		me.english = 97;
+		me.math = 96;
+		
+		System.out.println("ÀÌ¸§ : " + me.name);
+		System.out.println("±¹¾î : " + me.korean);
+		System.out.println("¿µ¾î : " + me.english);
+		System.out.println("¼öÇÐ : " + me.math);
+		System.out.println("ÃÑÁ¡ : " + me.makeSum());
+		System.out.println("Æò±Õ : " + me.makeAverage());
+		
+	}
+}
+
+
+
+
+

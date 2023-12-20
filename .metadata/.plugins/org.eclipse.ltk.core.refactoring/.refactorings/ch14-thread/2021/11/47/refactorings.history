@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;kr.s01.thread.ThreeadMain03.java&apos; to &apos;ThreadMain03.java&apos;&#x0D;&#x0A;- Original project: &apos;ch14-thread&apos;&#x0D;&#x0A;- Original element: &apos;kr.s01.thread.ThreeadMain03.java&apos;&#x0D;&#x0A;- Renamed element: &apos;kr.s01.thread.ThreadMain03.java&apos;" description="Rename compilation unit &apos;ThreeadMain03.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;kr.s01.thread{ThreeadMain03.java" name="ThreadMain03.java" references="false" stamp="1637136980184" version="1.0"/>
+</session>

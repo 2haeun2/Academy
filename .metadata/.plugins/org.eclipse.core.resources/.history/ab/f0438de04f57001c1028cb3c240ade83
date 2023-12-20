@@ -1,0 +1,91 @@
+package miniproject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+
+
+public class MemberMain {
+	private BufferedReader br;
+	private MovieDAO dao;
+	private int me_num;
+	private boolean flag;
+	
+	public MemberMain() {
+		dao= new MovieDAO();
+		try {
+			br= new BufferedReader(new InputStreamReader (System.in));
+			callMenu();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(br!=null)try {br.close();}catch(IOException e) {}
+		}
+	
+	}	
+public void callMenu()throws IOException{
+		
+	while(true) {
+		System.out.print("1.로인,2.회원가입,3.종료");
+		try {
+			int no = Integer.parseInt(br.readLine());
+			if(no == 1) {
+			}else if(no == 2) {
+				System.out.print("아이디:");
+				String me_id = br.readLine();
+				
+				System.out.println("비밀번호:");
+				String me_passwd = br.readLine();
+				
+				
+			}else if(no==3) {
+				System.out.println("프로그램 종료");
+				break;
+			}else {
+				System.out.println("잘못 입력했습니다.");
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("숫자만 입력 가능!!");
+			
+		}finally {
+			
+		}
+	}
+	
+	while(flag) {
+		System.out.print("1.,2.,3.,4.종료");
+		try {
+			int no = Integer.parseInt(br.readLine());
+			if(no==1) {//
+					
+			}else if (no==2) {//
+				
+			}else if (no==3) {//예매목록보기
+				dao.reservationCheck(me_num);
+				
+				//
+			}else if (no==4) {//종료
+				System.out.println("프로그램이 종료되었습니다.");
+				break;
+			}else {
+				System.out.println("잘못 입력했습니다.");
+			}
+		}catch(NumberFormatException e) {
+			System.out.println("숫자만 입력가능!!");
+		
+		}finally {
+			
+		}
+	}
+	
+         
+	
+}   
+		
+
+}
+

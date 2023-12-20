@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;kr.s01.intaddress&apos; to &apos;inetaddress&apos;&#x0D;&#x0A;- Original project: &apos;ch13-network&apos;&#x0D;&#x0A;- Original element: &apos;ch13-network/src/kr.s01.intaddress&apos;&#x0D;&#x0A;- Renamed element: &apos;ch13-network/src/inetaddress&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;kr.s01.intaddress&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;kr.s01.intaddress" name="inetaddress" qualified="false" references="true" stamp="1637194247913" textual="false" version="1.0"/>
+</session>

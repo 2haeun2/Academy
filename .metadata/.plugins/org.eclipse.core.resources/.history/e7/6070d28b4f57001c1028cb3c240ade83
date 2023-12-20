@@ -1,0 +1,54 @@
+package miniproject;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import kr.s03.preparedstatement.DBUtil;
+
+public class MovieDAO {
+
+	
+	
+	
+	//예매정보보기
+	public void selectMyList(int me_num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = null; 
+		
+		try {
+			//1,2
+			conn=DBUtil.getConnection();//예매번호 안필요한지
+			//sql
+			sql="SELECT mo_num,mo_title,mo_date,mo_seats FROM m_reservation"
+					+ "JOIN m_movie USING(mo_num)"
+					+ "JOIN m_member USING(me_num) WHERE me_num=?,?"
+					+ "ORDER BY mo_num DESC";
+			//3
+			pstmt=conn.prepareStatement(sql);		
+			//?
+			pstmt.setInt(1, me_num);
+			
+			//4
+			rs=pstmt.executeQuery();
+			System.out.println("=====================");
+			System.out.println("영화번호\t영화제목\t상영일\t좌석");
+			System.out.println("=====================");
+			
+			while(rs.next()) {
+				System.out.print(rs.getInt("mo_num")+"\t");
+				System.out.print(rs.getString("mo_title")+"\t");
+				System.out.print(rs.getDate("mo_date")+"\t");//String?
+				System.out.println(rs.getInt("mo_seats"));
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBUtil.executeClose(rs, pstmt,conn);
+		}
+	}
+	
+}
